@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/styles.css"/>
     <!-- Jquery -->
     <script src="<?php echo BASE_URL; ?>/resources/jquery/jquery.js"></script>
-    <!--Jquery-UI-->
-    <script src="<?php echo BASE_URL; ?>/resources/jquery-ui/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/resources/jquery-ui/jquery-ui.css"/>
 </head>
 <body>
 
