@@ -17,37 +17,50 @@ function get_percent($int1, $int2) {
     return $percent_friendly;
 }
 function get_server_memory_usage(){
+    $memory_usage = 0;
     $free = shell_exec('free');
-    $free = (string)trim($free);
-    $free_arr = explode("\n", $free);
-    $mem = explode(" ", $free_arr[1]);
-    $mem = array_filter($mem);
-    $mem = array_merge($mem);
-    $memory_usage = $mem[2]/$mem[1]*100;
-    $memory_usage = round($memory_usage,2);
+    if(!empty($free)) {
+        $free = (string)trim($free);
+        $free_arr = explode("\n", $free);
+        $mem = explode(" ", $free_arr[1]);
+        $mem = array_filter($mem);
+        $mem = array_merge($mem);
+        $memory_usage = $mem[2]/$mem[1]*100;
+        $memory_usage = round($memory_usage,2);
+    }
     return $memory_usage;
 }
 function get_server_memory_total() {
+    $mem[1] = 0;
     $free = shell_exec('free -t -b');
-    $free = (string)trim($free);
-    $free_arr = explode("\n", $free);
-    $mem = explode(" ", $free_arr[1]);
-    $mem = array_filter($mem);
-    $mem = array_merge($mem);
+    if(!empty($free)) {
+        $free = (string)trim($free);
+        $free_arr = explode("\n", $free);
+        $mem = explode(" ", $free_arr[1]);
+        $mem = array_filter($mem);
+        $mem = array_merge($mem);
+    }
     return $mem[1];
 }
 function get_server_memory_free() {
+    $mem[3] = 0;
     $free = shell_exec('free -t -b');
-    $free = (string)trim($free);
-    $free_arr = explode("\n", $free);
-    $mem = explode(" ", $free_arr[1]);
-    $mem = array_filter($mem);
-    $mem = array_merge($mem);
+    if(!empty($free)) {
+        $free = (string)trim($free);
+        $free_arr = explode("\n", $free);
+        $mem = explode(" ", $free_arr[1]);
+        $mem = array_filter($mem);
+        $mem = array_merge($mem);
+    }
     return $mem[3];
 }
 function get_server_cpu_usage_cores() {
-    $loads = sys_getloadavg();
-    $core_nums = trim(shell_exec("grep -P '^processor' /proc/cpuinfo|wc -l"));
-    $load = round($loads[0]/($core_nums + 1)*100, 2);
+    if (function_exists('sys_getloadavg')) {
+        $loads = sys_getloadavg();
+        $core_nums = trim(shell_exec("grep -P '^processor' /proc/cpuinfo|wc -l"));
+        $load = round($loads[0]/($core_nums + 1)*100, 2);
+    } else {
+        $load = 0;
+    }
     return $load;
 }
