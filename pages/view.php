@@ -16,11 +16,18 @@ $files = array_diff($scan_dir, array('.', '..', 'Thumbs.db'));
     </div>
 </div>
 <div class="table-responsive">
-    <table class="table table-striped table-hover">
+    <table
+            class="table table-striped table-hover"
+            id="table"
+            data-pagination="false"
+            data-search="true"
+            data-show-toggle="false"
+            data-toolbar=".toolbar"
+    >
         <thead>
         <tr>
-            <th>#</th>
-            <th>Title</th>
+            <th scope="col" data-field="id" data-sortable="true">#</th>
+            <th scope="col" data-field="title" data-sortable="true">Title</th>
             <th>Delete</th>
         </tr>
         </thead>

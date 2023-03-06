@@ -3,13 +3,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo SITE_TITLE; ?></title>
-    <link href="<?php echo BASE_URL; ?>/img/favicon.ico" type="image/x-icon" rel="icon"/><link href="/system/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+    <link href="<?php echo BASE_URL; ?>/img/favicon.ico" type="image/x-icon" rel="icon"/>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/resources/bootstrap/css/bootstrap.min.css"/>
+    <!-- Bootstrap Table -->
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/resources/bootstrap-table/bootstrap-table.min.css"/>
     <!-- Custom -->
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/css/styles.css"/>
-    <!-- Jquery -->
-    <script src="<?php echo BASE_URL; ?>/resources/jquery/jquery.js"></script>
 </head>
 <body>
 

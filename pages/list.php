@@ -1,4 +1,17 @@
-<h1 class="page-header">List</h1>
+<div class="row">
+    <div class="col-md-10">
+        <h1 class="page-header">List</h1>
+    </div>
+    <div class="col-md-2 cog-list">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="<?php echo BASE_URL; ?>/folder.php">Add Folder</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <?php
 $dir = BASE_DIR;
 if(is_dir($dir)) {
