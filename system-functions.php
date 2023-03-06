@@ -13,9 +13,10 @@ function get_int($bytes) {
 }
 function get_percent($int1, $int2) {
     $percent = $int1/$int2;
-    $percent_friendly = number_format( $percent * 100, 2 );
-    return $percent_friendly;
+    return number_format( $percent * 100, 2 );
 }
+
+/*
 function get_server_memory_usage(){
     $memory_usage = 0;
     $free = shell_exec('free');
@@ -30,27 +31,43 @@ function get_server_memory_usage(){
     }
     return $memory_usage;
 }
+*/
+
 function get_server_memory_total() {
     $mem[1] = 0;
     $free = shell_exec('free -t -b');
     if(!empty($free)) {
-        $free = (string)trim($free);
+        $free = trim($free);
         $free_arr = explode("\n", $free);
         $mem = explode(" ", $free_arr[1]);
-        $mem = array_filter($mem);
-        $mem = array_merge($mem);
+        $mem = array_filter($mem, 'strlen');
+        $mem = array_values($mem);
     }
     return $mem[1];
 }
+
+function get_server_memory_usage() {
+    $mem[2] = 0;
+    $free = shell_exec('free -t -b');
+    if(!empty($free)) {
+        $free = trim($free);
+        $free_arr = explode("\n", $free);
+        $mem = explode(" ", $free_arr[1]);
+        $mem = array_filter($mem, 'strlen');
+        $mem = array_values($mem);
+    }
+    return $mem[2];
+}
+
 function get_server_memory_free() {
     $mem[3] = 0;
     $free = shell_exec('free -t -b');
     if(!empty($free)) {
-        $free = (string)trim($free);
+        $free = trim($free);
         $free_arr = explode("\n", $free);
         $mem = explode(" ", $free_arr[1]);
-        $mem = array_filter($mem);
-        $mem = array_merge($mem);
+        $mem = array_filter($mem, 'strlen');
+        $mem = array_values($mem);
     }
     return $mem[3];
 }
