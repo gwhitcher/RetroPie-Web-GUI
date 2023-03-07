@@ -12,8 +12,9 @@ RetroPie Web Gui is for managing your roms in RetroPie in a nice web interface. 
 1. You will need to fix permissions. `sudo chown pi:raspberry /var/www/html`.
 1. Delete `index.html` from your `/var/www/html` directory now that you have permissions.  You can do this manually or by running `rm /var/www/html/index.html`
 1. Now type `git clone https://github.com/gwhitcher/RetroPie-Web-GUI.git .`
+1. Copy the config `mv /var/www/html/system-config.php.default /var/www/html/system-config.php`
 1. Setup a symbolic link to your roms by entering the following `ln -s /home/pi/RetroPie/roms /var/www/html/roms`.
 1. Type `hostname` (usually `raspberry`) and then enter that in a browser on your network to view!
 
 ### Security
-1. As I assumed your Raspberry Pi web ports would be closed I did not bother adding security.  If you would like you open your web ports or are worried someone locally could destroy your roms then adding a .htpasswd is suggest. You can do this here: [Dynamic Drive .htpasswd Generator](http://tools.dynamicdrive.com/password/)
+1. By default, RetroPie Web GUI is only accessible on your local network.  If you want to lock down your RetroPie Web GUI: [Dynamic Drive .htpasswd Generator](http://tools.dynamicdrive.com/password/)
