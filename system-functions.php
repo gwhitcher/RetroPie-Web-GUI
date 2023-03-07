@@ -15,24 +15,6 @@ function get_percent($int1, $int2) {
     $percent = $int1/$int2;
     return number_format( $percent * 100, 2 );
 }
-
-/*
-function get_server_memory_usage(){
-    $memory_usage = 0;
-    $free = shell_exec('free');
-    if(!empty($free)) {
-        $free = (string)trim($free);
-        $free_arr = explode("\n", $free);
-        $mem = explode(" ", $free_arr[1]);
-        $mem = array_filter($mem);
-        $mem = array_merge($mem);
-        $memory_usage = $mem[2]/$mem[1]*100;
-        $memory_usage = round($memory_usage,2);
-    }
-    return $memory_usage;
-}
-*/
-
 function get_server_memory_total() {
     $mem[1] = 0;
     $free = shell_exec('free -t -b');
@@ -45,7 +27,6 @@ function get_server_memory_total() {
     }
     return $mem[1];
 }
-
 function get_server_memory_usage() {
     $mem[2] = 0;
     $free = shell_exec('free -t -b');
@@ -58,7 +39,6 @@ function get_server_memory_usage() {
     }
     return $mem[2];
 }
-
 function get_server_memory_free() {
     $mem[3] = 0;
     $free = shell_exec('free -t -b');

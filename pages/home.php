@@ -31,7 +31,7 @@ $cpu_usage = get_server_cpu_usage_cores();
 $cpu_available = 100 - $cpu_usage;
 ?>
 
-<h1 class="page-header">Welcome</h1>
+<h1 class="page-header">Welcome <?php echo $cpu_available; ?> <?php echo $cpu_usage; ?></h1>
 
 <div class="row">
     <div class="col-sm-12">
