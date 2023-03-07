@@ -12,15 +12,16 @@ if(!empty($_POST['submit'])) {
     header('Location: '.BASE_URL.'/view.php?system='.$folder);
 }
 ?>
-<h1 class="page-header">Add file to <?php echo $folder; ?></h1>
+<h1 class="page-header">Add file to <?php echo strtoupper($folder); ?></h1>
 
 <form method="post" enctype="multipart/form-data" action="<?php echo BASE_URL; ?>/add.php?folder=<?php echo $folder; ?>">
-<div class="form-group">
-    <input class="btn btn-default btn-file" type="file" id="file_upload" name="file_upload" />
-</div>
 
-<div class="form-group">
-    <input type="submit" name="submit" id="submit" value="Submit" />
-</div>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">File Upload</label>
+        <input class="form-control" type="file" id="file_upload" name="file_upload">
+    </div>
 
+    <div class="form-group">
+        <input class="btn btn-sm btn-secondary" type="submit" name="submit" id="submit" value="Submit" />
+    </div>
 </form>

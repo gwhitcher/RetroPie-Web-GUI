@@ -1,5 +1,4 @@
 </div>
-<p class="text-center">Developed by <a href="http://georgewhitcher.com" target="_blank">George Whitcher</a></p>
 <!-- Jquery -->
 <script src="<?php echo BASE_URL; ?>/resources/jquery/jquery.js"></script>
 <!-- Bootstrap -->

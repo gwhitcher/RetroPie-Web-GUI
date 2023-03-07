@@ -5,14 +5,11 @@ $scan_dir = scandir($dir);
 $files = array_diff($scan_dir, array('.', '..', 'Thumbs.db'));
 ?>
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-10 text-center text-md-start">
         <h1 class="page-header"><?php echo strtoupper($_GET['system']); ?></h1>
     </div>
-    <div class="col-md-2 cog-list">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-        <ul class="dropdown-menu">
-            <li><a href="<?php echo BASE_URL; ?>/add.php?folder=<?php echo $folder; ?>">Add File</a></li>
-        </ul>
+    <div class="col-md-2 text-center text-md-end">
+        <a class="btn btn-sm btn-secondary" href="<?php echo BASE_URL; ?>/add.php?folder=<?php echo $folder; ?>">Add File</a>
     </div>
 </div>
 <div class="table-responsive">

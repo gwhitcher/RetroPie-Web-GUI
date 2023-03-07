@@ -1,15 +1,3 @@
-/* BODY */
-body {
-    padding-top: 30px;
-}
-
-.system-title {
-    text-transform: uppercase;
-    font-size: 18px;
-}
-
-/* Admin Cog */
-.cog-list {
-    padding-top: 40px;
-    font-size: 28px;
+a {
+    text-decoration: none;
 }
