@@ -37,13 +37,13 @@ $cpu_available = 100 - $cpu_usage;
     <div class="col-sm-12">
 
         <div class="card mb-3">
-            <div class="card-heading">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-9">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Disk Space</h3>
+                    <div class="col-sm-9 text-center text-md-start">
+                        <h3>Disk Space</h3>
                     </div>
-                    <div class="col-sm-3">
-                        <label class="label label-default"><?php echo $disk_available; ?>% Available</label>
+                    <div class="col-sm-3 text-center text-md-end">
+                        <span class="badge bg-secondary"><?php echo $disk_available; ?>% Available</span>
                     </div>
                 </div>
             </div>
@@ -63,13 +63,13 @@ $cpu_available = 100 - $cpu_usage;
         </div>
 
         <div class="card mb-3">
-            <div class="card-heading">
+            <div class="card-header">
                 <div class="row">
-                    <div class="col-sm-9">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Memory</h3>
+                    <div class="col-sm-9 text-center text-md-start">
+                        <h3>Memory</h3>
                     </div>
-                    <div class="col-sm-3">
-                        <label class="label label-default"><?php echo $memory_available; ?>% Available</label>
+                    <div class="col-sm-3 text-center text-md-end">
+                        <span class="badge bg-secondary"><?php echo $memory_available; ?>% Available</span>
                     </div>
                 </div>
             </div>
@@ -88,13 +88,13 @@ $cpu_available = 100 - $cpu_usage;
         </div>
 
         <div class="card">
-            <div class="card-heading">
+            <div class="card-header">
                 <div class="row">
                     <div class="col-sm-9">
-                        <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> CPU</h3>
+                        <h3>CPU</h3>
                     </div>
-                    <div class="col-sm-3">
-                        <label class="label label-default"><?php echo $cpu_available; ?>% Available</label>
+                    <div class="col-sm-3 text-center text-md-end">
+                        <span class="badge bg-secondary"><?php echo $cpu_available; ?>% Available</span>
                     </div>
                 </div>
             </div>
