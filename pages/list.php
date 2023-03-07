@@ -14,7 +14,7 @@ if(is_dir($dir)) {
                 <div class="card card-body text-center">
                     <a href="<?php echo BASE_URL; ?>/view.php?system=<?php echo $file; ?>">
                         <img class="img-fluid" src="<?php echo BASE_URL; ?>/img/systems/<?php echo $file; ?>.jpg" alt="<?php echo $file; ?>"/>
-                        <span class="text-uppercase fw-bold h1"><?php echo $file; ?></span>
+                        <div class="text-uppercase fw-bold h1"><?php echo $file; ?></div>
                     </a>
                 </div>
             </div>
