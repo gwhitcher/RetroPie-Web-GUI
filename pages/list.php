@@ -10,10 +10,10 @@ if(is_dir($dir)) {
         $file_parts = pathinfo($dir.'/'.$file);
         if (empty($file_parts['extension'])) {
             ?>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mb-4">
                 <div class="card card-body text-center">
                     <a href="<?php echo BASE_URL; ?>/view.php?system=<?php echo $file; ?>">
-                        <img class="img-responsive" src="<?php echo BASE_URL; ?>/img/systems/<?php echo $file; ?>.jpg" alt="<?php echo $file; ?>"/>
+                        <img class="img-fluid" src="<?php echo BASE_URL; ?>/img/systems/<?php echo $file; ?>.jpg" alt="<?php echo $file; ?>"/>
                         <span class="text-uppercase fw-bold h1"><?php echo $file; ?></span>
                     </a>
                 </div>
