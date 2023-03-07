@@ -36,8 +36,8 @@ $cpu_available = 100 - $cpu_usage;
 <div class="row">
     <div class="col-sm-12">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        <div class="card mb-3">
+            <div class="card-heading">
                 <div class="row">
                     <div class="col-sm-9">
                         <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Disk Space</h3>
@@ -47,7 +47,7 @@ $cpu_available = 100 - $cpu_usage;
                     </div>
                 </div>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $get_ds_percent; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $get_ds_percent; ?>%;">
                         <?php echo $get_ds_percent; ?>%
@@ -62,8 +62,8 @@ $cpu_available = 100 - $cpu_usage;
 
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        <div class="card mb-3">
+            <div class="card-heading">
                 <div class="row">
                     <div class="col-sm-9">
                         <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Memory</h3>
@@ -73,7 +73,7 @@ $cpu_available = 100 - $cpu_usage;
                     </div>
                 </div>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $get_mem_percent; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $get_mem_percent; ?>%;">
                         <?php echo $get_mem_percent; ?>%
@@ -87,8 +87,8 @@ $cpu_available = 100 - $cpu_usage;
             </div>
         </div>
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
+        <div class="card">
+            <div class="card-heading">
                 <div class="row">
                     <div class="col-sm-9">
                         <h3 class="panel-title"><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> CPU</h3>
@@ -98,7 +98,7 @@ $cpu_available = 100 - $cpu_usage;
                     </div>
                 </div>
             </div>
-            <div class="panel-body">
+            <div class="card-body">
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $cpu_usage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $cpu_usage; ?>%;">
                         <?php echo $cpu_usage; ?>%

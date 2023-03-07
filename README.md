@@ -6,10 +6,12 @@ RetroPie Web Gui is for managing your roms in RetroPie in a nice web interface. 
 
 1. Apache is required.  Install it by running the following command `sudo apt-get install apache2`
 1. PHP is required.  Install it by running the following command `sudo apt-get install php`
+2. RetroPie is required. [RetroPie](https://retropie.org.uk/docs/First-Installation/)
 
 ### Installation
 1. First you need to get your web directory ready. `cd /var/www/html/`.  
-1. You will need to fix permissions. `sudo chown pi:raspberry /var/www/html`.
+1. You will need to adjust ownership. `sudo chown pi:raspberry /var/www/html`.
+1. You will need to make your roms directory writable. `sudo chmod 777 -R /home/pi/RetroPie/roms`.
 1. Delete `index.html` from your `/var/www/html` directory now that you have permissions.  You can do this manually or by running `rm /var/www/html/index.html`
 1. Now type `git clone https://github.com/gwhitcher/RetroPie-Web-GUI.git .`
 1. Copy the config `mv /var/www/html/system-config.php.default /var/www/html/system-config.php`
